@@ -8,7 +8,7 @@ public class AssertTest {
     @Test
     public void testAssertArrayEquals(){
         byte[] esperado = "teste".getBytes();
-        byte[] atual    = "testedadfasdfasdf1".getBytes();
+        byte[] atual    = "teste".getBytes();
         assertArrayEquals(esperado,atual);
     }
 

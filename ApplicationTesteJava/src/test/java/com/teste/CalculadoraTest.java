@@ -2,7 +2,7 @@ package com.teste;
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculadoraTest{
 
@@ -13,5 +13,14 @@ public class CalculadoraTest{
        assertEquals(5, soma);
 
     }
+
+//    @Test
+//    public void testeSomarComMock(){
+//        Calculadora calculadora = mock(Calculadora.class);
+//
+////         when(calculadora.somar("1+2").thenReturn(10);
+//         int resultado = calculadora.somar("5+5");
+//         assertEquals(10,resultado);
+//    }
 
 }

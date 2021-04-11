@@ -25,15 +25,15 @@ Funcoes/Suppliers.java
  Funcoes.Pessoa
  Funcoes.Suppliers
 Fatorial/FatorialTailCall.java
- Fatorial.FatorialTailCall
+ FatorialTailCall
 ArrayList/Aluno.java
  ArrayList.Aluno
 Fatorial/FatorialRecursivo.java
- Fatorial.FatorialRecursivo
+ FatorialRecursivo
 Fatorial/FatorialMemorization.java
- Fatorial.FatorialMemorization
+ FatorialMemorization
 Funcoes/FuncaoComClasseAnonima.java
- Funcoes.FuncaoComClasseAnonima
+ FuncaoComClasseAnonima
 Parallel/ParallelStreamExemplo.java
  Parallel.ParallelStreamExemplo
  Parallel.ParallelStreamExemplo$Atividade
@@ -43,3 +43,7 @@ Parallel/ParallelStreamExemplo.java
  Parallel.ParallelStreamExemplo$Quarto
 ArrayList/Pessoa.java
  ArrayList.Pessoa
+CalcularIdade.java
+ CalcularIdade
+Threads/Regressiva.java
+ Threads.Regressiva
