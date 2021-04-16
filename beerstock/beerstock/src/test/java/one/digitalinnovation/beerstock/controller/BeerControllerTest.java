@@ -242,7 +242,7 @@ public class BeerControllerTest {
 //                .andExpect(jsonPath("$.type", is(beerDTO.getType().toString())))
 //                .andExpect(jsonPath("$.quantity", is(beerDTO.getQuantity())));
 //    }
-//
+
 //    @Test
 //    void whenPATCHIsCalledToDEcrementLowerThanZeroThenBadRequestStatusIsReturned() throws Exception {
 //        QuantityDTO quantityDTO = QuantityDTO.builder()

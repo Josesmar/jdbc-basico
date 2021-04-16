@@ -1,41 +1,36 @@
-
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class ValidaSenhaComRequisitos {
-    public final static int MAX = 200;
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-//    static StringTokenizer st = new StringTokenizer("teste");
-
     public static void main(String[] args) throws IOException {
-        String password = new String(String.valueOf(MAX));
-        String senhaValidada;
-        password = in.readLine();
-        Boolean validou;
+        String nome = in.readLine();
+        try {
+            FileReader arq = new FileReader(nome);
+            BufferedReader lerArq = new BufferedReader(arq);
 
-        do {
-            validadorDeSenha(password);
-            password = "";
-        } while (password.length() > 0);
+            String linha = lerArq.readLine(); // lê a primeira linha
 
+            while (linha != null) {
+                validadorDeSenha(linha);
+                linha = lerArq.readLine(); // lê da segunda até a última linha
+            }
+            arq.close();
+        } catch (IOException e) {
+        }
     }
-
-    public static String validadorDeSenha(String senha) {
-
-        if ((senha.length() < 6) || (senha.length() > 32) ||
-                (senha.matches("(^|$)[a-z]+(^|$)[0-9]")) || (senha.length() == 0)) {
+    public static boolean senhaValida(String Senha){
+        return "\"^(?=.*[az])(?=.*[AZ])(?=.*\\d)[a-zA-Z\\d]{6,32}$\"".matches(Senha);
+    }
+    public static void validadorDeSenha(String senha) {
+        if ((senha.contains("'!@#$%¨&*()")) || (senha.length() < 6) || (senha.length() > 32) || (senha.length() == 0)
+           && (!senhaValida(senha))) {
             System.out.println("Senha invalida.");
         } else {
             System.out.println("Senha valida.");
         }
-        return senha;
     }
 }
-
-
-
-
-
-
-
